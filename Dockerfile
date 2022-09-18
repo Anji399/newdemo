@@ -1,7 +1,7 @@
 FROM maven as build 
 WORKDIR /app
 COPY . .
-RUN mvn clean install 
+RUN mvn clean install -DskipTests
 
 FROM openjdk:11.0.10-jre
 WORKDIR /app
